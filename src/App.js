@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './components/Home';
 
 const App = () => {
@@ -12,7 +12,9 @@ const App = () => {
         <Header />
         <Sidebar />
         <div className="rightContentContainer">
-          <Route path="/" component={Home} />
+          <Switch>
+            <Route path="/" component={Home} exact />   
+          </Switch>
         </div>
       </div>
     </Router>
