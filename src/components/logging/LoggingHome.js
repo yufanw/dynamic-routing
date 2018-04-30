@@ -7,8 +7,6 @@ import Lorem from './Lorem';
 
 const LoggingHome = ({ match }) => {
 
-  console.log(match.url);
-
   return (
     <div>
       <h1>Logging Home</h1>

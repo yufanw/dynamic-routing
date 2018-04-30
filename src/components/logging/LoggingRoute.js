@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
 
-const LoggingRoute = ({component: ComponentToRender, ...rest}) => {
+const LoggingRoute = ({component: ComponentToRender, staticContext, ...rest}) => {
 
   return (
     <Route 
@@ -9,9 +9,7 @@ const LoggingRoute = ({component: ComponentToRender, ...rest}) => {
       render={(props) => {
         alert('Route is Logging ' + props.match.params.eid);
         return <ComponentToRender {...props} />
-      }}>
-
-    </Route>
+      }} />
   );
 };
 
