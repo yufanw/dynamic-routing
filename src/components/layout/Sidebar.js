@@ -5,9 +5,11 @@ const Sidebar = () => {
 
   const links = [
     { name: 'Color', url: '/color' },
+    { name: 'Logging', url: '/logging' },
+    { name: 'Private', url: '/private' },
     { name: 'Prompt', url: '/prompt' },
-    { name: 'Prop Viewer', url: '/props' },
-    { name: '404 Error', url: '/404Error' },
+    { name: 'Prop Viewer', url: '/propsview' },
+    { name: '404 Error', url: '/404Error' }
   ];
 
   let linksComponents = links.map((link, index) => {
