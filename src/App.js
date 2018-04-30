@@ -7,11 +7,14 @@ import NameForm from './components/prompt/NameForm';
 import PropsViewer from './components/PropsViewer';
 import PageNotFound from './components/PageNotFound';
 import ColorSwatch from './components/color/ColorSwatch';
+import SmartColorSwatch from './components/color/SmartColorSwatch';
 import LoggingHome from './components/logging/LoggingHome';
 import ProtectedHome from './components/secure/ProtectedHome';
 import PrivateRoute from './components/secure/PrivateRoute';
+import People from './components/people/People'
 import Login from './components/secure/Login';
 import Logout from './components/secure/Logout';
+import PersonProfileContainer from './containers/PersonProfileContainer';
 
 const App = () => {
 
@@ -23,13 +26,19 @@ const App = () => {
         <div className="rightContentContainer">
           <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/prompt" component={NameForm} />
             <Route path="/propsview" component={PropsViewer} />
+            <Route path="/prompt" component={NameForm} />
+            <Route path="/logging" component={LoggingHome} />
+
+            <Route path="/people/:id" component={PersonProfileContainer} />
+            <Route path="/people" component={People} />
+
+            <Route path="/color/:text/:color" render={SmartColorSwatch} />
             <Route path="/color" render={() => {
               return <ColorSwatch color="red" text="Red" />
             }} />
-            <Route path="/logging" component={LoggingHome} />
-            <PrivateRoute path="/private" component={ProtectedHome} />
+
+            <PrivateRoute path="/protected" component={ProtectedHome} />
             <Route path="/login" component={Login} />
             <Route path="/logout" component={Logout} />
 
