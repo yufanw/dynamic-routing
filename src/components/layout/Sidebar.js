@@ -9,7 +9,7 @@ const Sidebar = () => {
     { name: 'Logging', url: '/logging' },
     { name: 'People', url: '/people' },
     { name: 'Prompt', url: '/prompt' },
-    { name: 'Prop Viewer', url: '/propview' },
+    { name: 'Props Viewer', url: '/propsview' },
     { name: 'Protected', url: '/protected' },
     { name: 'Smart Color', url: '/color/Green/00ff00' },
     { name: '404 Error', url: '/404Error' },

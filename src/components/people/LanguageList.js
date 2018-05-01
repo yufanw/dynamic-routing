@@ -12,11 +12,27 @@ class LanguageList extends React.Component {
     };
   }
 
+  static getDerivedStateFromProps = (nextProps, prevState) => {
+    if (nextProps.letter !== prevState.letter) {
+      return {
+        letter: null
+      };
+    }
+  };
+
   componentDidMount = () => {
     this.setState({
       letter: this.props.match.params.letter
-    });
-  };
+    })
+  }
+
+  componentDidUpdate = () => {
+    if (this.state.letter === null) {
+      this.setState({
+        letter: this.props.match.params.letter
+      });
+    }
+  }
 
   getKnownLanguages = () => {
 
