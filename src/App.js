@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <Router>
-      <div>
+      <div className="main">
         <Header />
         <Sidebar />
         <div className="rightContentContainer">
