@@ -24,7 +24,6 @@ class NameForm extends React.Component {
       this.setState({
         valid: true
       });
-      // take some action
       alert(`Your name is ${this.state.firstName} ${this.state.lastName} `)
     }
   };

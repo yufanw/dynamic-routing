@@ -7,12 +7,6 @@ import LanguageList from './LanguageList';
 
 const PersonProfile = (props) => {
 
-  // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams#Browser_compatibility
-  // const query = new URLSearchParams(props.location.search);
-  // const name = query.get('name');
-  // const occupation = query.get('occupation');
-
-  // so we use this package instead query-string
   const qsValues = querystring.parse(props.location.search);
   const name = qsValues.name;
   const occupation = qsValues.occupation;
